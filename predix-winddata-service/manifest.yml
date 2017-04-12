@@ -1,0 +1,21 @@
+---
+applications:
+- name: SaketPredix-winddata-predix-nodejs-starter
+  memory: 128M
+  buildpack: nodejs_buildpack
+  #command:  DEBUG=express:* node app.js
+  command:  node server/app.js
+services:
+   - saketpredix-uaa
+ # - <your-name>-secure-uaa-instance
+ # - <your-name>-timeseries-instance
+ # - <your-name>-asset-instance
+env:
+    node_env: cloud
+    uaa_service_label : predix-uaa
+    clientId: app_client_id1
+    #clientId: {Enter client ID, e.g. app_client_id, and place it here}
+    base64ClientCredential: YXBwX2NsaWVudF9pZDE6U2FrZXRQcmVkaXhDbGllbnQxZ
+    # Following properties configured only for Timeseries WindData service Integration
+    windServiceURL:  https://saketpredix-integration-winddata-service.run.aws-usw02-pr.ice.predix.io
+    #assetMachine: my-type
