@@ -1,8 +1,8 @@
-Predix Development Kit - NodeJs Starter Application
+Predix Development Kit - CC Project
 ==========================================================
 
-This is simple starter Node application that demonstrates user authentication with Predix UAA,
-and integration with microservices.
+This is a sample application which queries winddata from backend microservice to draw charts.
+It uses two services, UAA and timeseries.
 
 ## Running locally
 Edit the config.json to run the application locally for your UAA client.
